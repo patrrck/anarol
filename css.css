@@ -1,0 +1,251 @@
+body {
+    background-image: url(imgs/background.jpg);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+@keyframes changebackgroundcolor {
+    0% {
+        background-color: #64f06b;
+      }
+      50% {
+        background-color: #5af810;
+      }
+      100% {
+        background-color: #64f06b;
+      }
+    }
+
+.botao{
+    margin: 15px;
+    border-radius: 30px;
+    display: flex;
+    width: 300px;
+    height: 100px;
+    animation: changebackgroundcolor 3s infinite;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 0.1s ease;
+}
+.botao h1{
+color: white;
+font-family: outfit;
+}
+a.botaozz {
+    text-decoration: none;
+}
+.botao:hover {
+    transform: scale(1.1);  
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+.titulo h1{
+  font-family: Outfit;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  background-color: #5af810;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  animation: changebackgroundcolor 3s infinite;
+}
+
+#seta {
+  position: absolute;
+  right: 95%;
+  rotate: 180deg;
+  transition: transform 0.1s ease;
+}
+
+.imagens {
+  margin: auto;
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1200px;
+  height: 650px;
+  background-color: #5af810;
+  border-radius: 5px;
+  animation: zoomIn 1s forwards;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.514);
+}
+
+
+
+@keyframes zoomIn {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+#emoji {
+  position: fixed;
+  animation: rodando 2s infinite;
+  right: 2px;
+  font-size: 100px;
+}
+
+@keyframes rodando {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#tudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#div2 {
+  background-color: #5af810;
+  width: 500px;
+  height: 500px;
+}
+
+.imagens h1{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  font-family: outfit;
+  color: aliceblue;
+}
+
+.quadrado {
+  width: 900  px;
+  height: 510px;
+  display: flex;
+  margin-top: 90px;
+  margin-left: 155px;
+  position: fixed;
+  justify-content: flex-start;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.329);
+}
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seta:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.seta.esquerda {
+  left: 10px;
+}
+
+.seta.direita {
+  right: 10px;
+}
+
+.imagens h2{
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  font-family: outfit;
+  color: aliceblue;
+}
+
+#seta2 {
+  position: absolute;
+  bottom: 90%;
+  right: 95%;
+  rotate: 180deg;
+}
+
+#nome {
+  position: fixed;
+}
+
+#seta:hover {
+  transform: scale(1.1);  
+}
+
+#seta2:hover {
+  transform: scale(1.1);
+}
+
+#seta2 {
+  transition: transform 0.1s ease;
+}
+
+#typing-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 650px;
+  padding-bottom: 220px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+#typing-animation p {
+  display: inline-block;
+  color: aliceblue;
+  font-family: outfit;
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0   auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+#game-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 325px;
+  border-radius: 50px;
+  animation: zoomIn 1s forwards;
+}
+
+#target {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(88, 255, 102);
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+}
+
+#score {
+  text-align: center;
+  font-family: outfit;
+  color: #d6ff64;
+}
